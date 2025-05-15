@@ -265,6 +265,135 @@
          .brand-name {
             font-family: 'Kaushan Script', cursive;
         }
+
+         .menu-container {
+            max-width: 950px;
+            margin: 30px auto;
+            background: #181818e6;
+            border-radius: 14px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+            padding: 32px 18px 32px 18px;
+        }
+        .headers {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .restaurant-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ffdf00;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+            text-shadow: 1px 1px 8px #000;
+        }
+
+        .images{
+               
+            margin: 0;
+            padding: 0;
+            background-color: #232323;
+            background-image: url('data:image/svg+xml;utf8,<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.08"><circle cx="30" cy="30" r="20" fill="orange"/><rect x="70" y="70" width="30" height="15" rx="7" fill="green"/><ellipse cx="90" cy="30" rx="15" ry="10" fill="red"/><rect x="20" y="80" width="20" height="8" rx="4" fill="yellow"/></g></svg>');
+            background-size: 180px 180px;
+        
+        }
+
+                .contacts {
+            font-size: 1.1em;
+            color: #fff;
+            background: #b30000;
+            display: inline-block;
+            padding: 4px 18px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .menu-grids {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 28px;
+        } 
+        
+        .sections {
+            background: #232323;
+            border-radius: 12px;
+            flex: 1 1 280px;
+            min-width: 280px;
+            margin-bottom: 26px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            padding-bottom: 10px;
+        }
+        .section-titles {
+            background: #b30000;
+            color: #fff;
+            padding: 10px 0;
+            border-radius: 12px 12px 0 0;
+            font-size: 1.25em;
+            letter-spacing: 1px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        .menu-tables {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0;
+        }
+        .menu-tables th, .menu-tables td {
+            padding: 8px 10px;
+            text-align: left;
+        }
+        .menu-tables th {
+            color: #ffdf00;
+            font-weight: bold;
+            font-size: 1em;
+            border-bottom: 1px solid #444;
+        }
+        .menu-tables td {
+            color: #fff;
+            font-size: 1em;
+            border-bottom: 1px solid #333;
+        }
+        .menu-tables td.price {
+            color: #ffdf00;
+            font-weight: 600;
+            text-align: right;
+        }
+        .menu-tables tr:last-child td {
+            border-bottom: none;
+        }
+        .menu-tables tr:hover {
+            background: #ffdf00;
+            color: #181818;
+            transition: background 0.3s, color 0.3s;
+        }
+        .menu-tables tr:hover td.price {
+            color: #b30000;
+        }
+        @media (max-width: 900px) {
+            .menu-grids {
+                flex-direction: column;
+                gap: 0;
+            }
+            .sections {
+                margin-bottom: 32px;
+            }
+        }
+        @media (max-width: 600px) {
+            .menu-container {
+                padding: 8px 2px;
+            }
+            .sections {
+                min-width: 0;
+                padding-bottom: 0;
+            }
+            .restaurant-name {
+                font-size: 1.5em;
+            }
+        }
         
     </style>
 </head>
@@ -411,7 +540,7 @@
                 </div>
                 <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg Tandoori" class="w-full h-full object-cover">
+                        <img src="./images/butter.jpg" alt="Veg Tandoori" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Veg Tandoori Butter Leg Piece</h3>
@@ -494,7 +623,7 @@
                     <div class="flip-card-inner">
                         <div class="flip-card-front bg-white shadow-lg">
                             <div class="h-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1541518763669-27fef9b49542?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg KFC Wings" class="w-full h-full object-cover">
+                                <img src="./images/pizza.jpg" alt="Veg KFC Wings" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                                     <h3 class="text-white text-2xl font-bold">Veg KFC Wings</h3>
                                 </div>
@@ -616,323 +745,107 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold relative inline-block" data-aos="fade-up">
-                    Our Menu
-                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary"></span>
-                </h2>
-            </div>
-            
-            <!-- Menu Tabs -->
-            <div class="flex flex-wrap justify-center mb-12 gap-3" data-aos="fade-up">
-                <button class="menu-tab active px-5 py-3 rounded-full bg-primary text-white font-bold transition-all hover:shadow-lg" data-tab="special-tandoori">SPECIAL VEG TANDOORI</button>
-                <button class="menu-tab px-5 py-3 rounded-full bg-gray-200 text-gray-800 font-bold transition-all hover:shadow-lg" data-tab="funny-chaap">FUNNY CHAAP</button>
-                <button class="menu-tab px-5 py-3 rounded-full bg-gray-200 text-gray-800 font-bold transition-all hover:shadow-lg" data-tab="kababs">KABABS</button>
-                <button class="menu-tab px-5 py-3 rounded-full bg-gray-200 text-gray-800 font-bold transition-all hover:shadow-lg" data-tab="paneer">PANEER ITEMS</button>
-                <button class="menu-tab px-5 py-3 rounded-full bg-gray-200 text-gray-800 font-bold transition-all hover:shadow-lg" data-tab="special-fry">SPECIAL VEG FRY</button>
-                <button class="menu-tab px-5 py-3 rounded-full bg-gray-200 text-gray-800 font-bold transition-all hover:shadow-lg" data-tab="special-gravy">SPECIAL VEG GRAVY</button>
-            </div>
-            
-            <!-- Price Toggle -->
-            <div class="flex justify-center mb-8">
-                <div class="price-tab active" data-price="half">Half</div>
-                <div class="price-tab" data-price="full">Full</div>
-            </div>
-            
-            <!-- Menu Content -->
-            <div class="tab-content active" id="special-tandoori">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Malai Tikka" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Malai Tikka With Desi Ghee</h3>
-                            <p class="text-gray-600 mb-4">Creamy tikka prepared with pure desi ghee for authentic flavor</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹200</span>
-                                <span class="text-primary font-bold price-full hidden">₹350</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Malai Chaap" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Malai Chaap</h3>
-                            <p class="text-gray-600 mb-4">Tender soya chaap marinated in creamy sauce</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹140</span>
-                                <span class="text-primary font-bold price-full hidden">₹250</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Punjabi Chaap" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Punjabi Chaap</h3>
-                            <p class="text-gray-600 mb-4">Traditional Punjabi-style marinated soya chaap</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹140</span>
-                                <span class="text-primary font-bold price-full hidden">₹250</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="300">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1534939561126-855b8675edd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Afghani Chaap" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Afghani Chaap</h3>
-                            <p class="text-gray-600 mb-4">Mild and creamy with Afghani-inspired spices</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹140</span>
-                                <span class="text-primary font-bold price-full hidden">₹250</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="400">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1613292443284-8d10ef9383fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Achari Chaap" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Achari Chaap</h3>
-                            <p class="text-gray-600 mb-4">Tangy pickle-flavored marinade with traditional spices</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹140</span>
-                                <span class="text-primary font-bold price-full hidden">₹250</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="tab-content" id="funny-chaap">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg Tandoori Butter Leg Piece" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Veg Tandoori Butter Leg Piece</h3>
-                            <p class="text-gray-600 mb-4">Shaped like chicken leg, but made with soya proteins</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg Chicken Tikka" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Veg Chicken Tikka</h3>
-                            <p class="text-gray-600 mb-4">Plant-based tikka with authentic chicken-like taste</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1577303886844-05b134031d60?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Naughty Chaap" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Naughty Chaap</h3>
-                            <p class="text-gray-600 mb-4">Our signature playful creation with secret spice blend</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="tab-content" id="kababs">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1625398407796-82650a8c9dd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg Kabab" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Veg Kabab</h3>
-                            <p class="text-gray-600 mb-4">Mixed vegetable kababs with aromatic spices</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹140</span>
-                                <span class="text-primary font-bold price-full hidden">₹250</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1606728035253-49e8a23146de?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg Malai Kabab" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Veg Malai Kabab</h3>
-                            <p class="text-gray-600 mb-4">Creamy vegetarian kababs with rich flavor</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹140</span>
-                                <span class="text-primary font-bold price-full hidden">₹250</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1644364935906-792b2245a2c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg KFC Style Kabab" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Veg KFC Style Kabab</h3>
-                            <p class="text-gray-600 mb-4">Crispy coated vegetable kababs with secret spices</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="tab-content" id="paneer">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1606471191009-63994c53433b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Paneer Tikka" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Paneer Tikka</h3>
-                            <p class="text-gray-600 mb-4">Classic cottage cheese cubes marinated with spices</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Malai Paneer Tikka" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Malai Paneer Tikka</h3>
-                            <p class="text-gray-600 mb-4">Creamy marinated paneer cubes grilled to perfection</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Afghani Paneer Tikka" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Afghani Paneer Tikka</h3>
-                            <p class="text-gray-600 mb-4">White creamy marination with mild spices</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="tab-content" id="special-fry">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1541518763669-27fef9b49542?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg KFC Wings" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Veg KFC Wings</h3>
-                            <p class="text-gray-600 mb-4">Crispy plant-based wings that taste like the real thing</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg KFC Crispy Chaap" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Veg KFC Crispy Chaap</h3>
-                            <p class="text-gray-600 mb-4">Extra crispy coated soya chaap in KFC-style</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1625398407796-82650a8c9dd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg KFC Leg Piece" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Veg KFC Leg Piece</h3>
-                            <p class="text-gray-600 mb-4">Soya-based crispy leg pieces with secret spice mix</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="tab-content" id="special-gravy">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg Butter Chicken" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Veg Butter Chicken</h3>
-                            <p class="text-gray-600 mb-4">Vegetarian version of the classic butter chicken</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Veg Mutton Gravy Chaap" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Veg Mutton Gravy Chaap</h3>
-                            <p class="text-gray-600 mb-4">Chaap in rich gravy that mimics mutton curry</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item bg-white shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                        <div class="h-40 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1548943487-a2e4e43b4853?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kadai Chaap Gravy" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Kadai Chaap Gravy</h3>
-                            <p class="text-gray-600 mb-4">Chaap cooked with bell peppers in spicy kadai masala</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold price-half">₹170</span>
-                                <span class="text-primary font-bold price-full hidden">₹300</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+     <div class="images">
+  <div class="menu-container">
+    <div class="headers">
+        <div class="restaurant-name">CHAAP E PUNJAB</div>
+        <div class="contacts">Mob: +91 96800 72122</div>
+    </div>
+
+    <div class="menu-grids">
+        <!-- SPECIAL VEG TANDOORI -->
+        <div class="sections">
+            <div class="section-titles">★ SPECIAL VEG TANDOORI ★</div>
+            <table class="menu-tables">
+                <tr><th>Item</th><th>Half</th><th>Full</th></tr>
+                <tr><td>Malai Tikka With Desi Ghee</td><td class="price">200/-</td><td class="price">350/-</td></tr>
+                <tr><td>Malai Chaap</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+                <tr><td>Punjabi Chaap</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+                <tr><td>Afghani Chaap</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+                <tr><td>Achari Chaap</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+                <tr><td>Masala Chaap</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+                <tr><td>Haryali Chaap</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+                <tr><td>Stuffed Chaap</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+                <tr><td>Lemon Chaap</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+                <tr><td>Garlic Chaap</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+            </table>
         </div>
-    </section>
+        <!-- CHAAP-E-PUNJABI FUNNY CHAAP -->
+        <div class="sections">
+            <div class="section-titles">★ CHAAP-E-PUNJABI FUNNY CHAAP ★</div>
+            <table class="menu-tables">
+                <tr><th>Item</th><th>Half</th><th>Full</th></tr>
+                <tr><td>Veg Tandoori Butter Leg Piece</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Chicken Tikka</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Naughty Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Dhuandhar Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Nagin Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Katilana Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Kali Mirch Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Gym Special Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Mix Tandoori Platter</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+            </table>
+        </div>
+        <!-- KABAB -->
+         <div class="sections">
+            <div class="section-titles">★ SPECIAL VEG GRAVY ★</div>
+            <table class="menu-tables">
+                <tr><th>Item</th><th>Half</th><th>Full</th></tr>
+                <tr><td>Veg Bell Chicken</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Mutton Gravy Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Butter Chicken</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Rara Meat</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Mutton Keema Kofteji</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Handi Chicken</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Kadai Ke Nazare (Gravy Chaap)</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Special Tawa Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Korma Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Chicken-Do-Pyaza Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Rogan Josh Gravy</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Bheja Fry Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg Black Mutton Gravy Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Kadai Chaap Gravy</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+            </table>
+        </div>
+        <!-- PANEER ITEMS -->
+        <div class="sections">
+            <div class="section-titles">★ PANEER ITEMS ★</div>
+            <table class="menu-tables">
+                <tr><th>Item</th><th>Half</th><th>Full</th></tr>
+                <tr><td>Paneer Tikka</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Malai Paneer Tikka</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Afghani Paneer Tikka</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Kali Mirch Paneer Tikka</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Pudina Paneer Tikka</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+            </table>
+        </div>
+        <!-- SPECIAL VEG FRY -->
+        <div class="sections">
+            <div class="section-titles">★ SPECIAL VEG FRY ★</div>
+            <table class="menu-tables">
+                <tr><th>Item</th><th>Half</th><th>Full</th></tr>
+                <tr><td>Veg KFC Wings</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg KFC Crispy Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg KFC Leg Piece</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg KFC Surmai Fish</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Baby Doll Chaap</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+            </table>
+        </div>
+        <!-- SPECIAL VEG GRAVY -->
+         <div class="sections">
+            <div class="section-titles">★ KABAB ★</div>
+            <table class="menu-tables">
+                <tr><th>Item</th><th>Half</th><th>Full</th></tr>
+                <tr><td>Veg Kabab</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+                <tr><td>Veg Malai Kabab</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+                <tr><td>Veg DrumStick Kabab</td><td class="price">140/-</td><td class="price">250/-</td></tr>
+                <tr><td>Veg Haryali Kabab</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+                <tr><td>Veg KFC Style Kabab</td><td class="price">170/-</td><td class="price">300/-</td></tr>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
 
     <!-- Gallery Section -->
     <section id="gallery" class="py-20">
@@ -949,7 +862,7 @@
                     <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gallery" class="w-full h-48 object-cover">
                 </div>
                 <div class="gallery-img" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gallery" class="w-full h-48 object-cover">
+                    <img src="./images/butter.jpg" alt="Gallery" class="w-full h-48 object-cover">
                 </div>
                 <div class="gallery-img" data-aos="zoom-in" data-aos-delay="200">
                     <img src="https://images.unsplash.com/photo-1606471191009-63994c53433b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gallery" class="w-full h-48 object-cover">
@@ -958,10 +871,10 @@
                     <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gallery" class="w-full h-48 object-cover">
                 </div>
                 <div class="gallery-img" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://images.unsplash.com/photo-1541518763669-27fef9b49542?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gallery" class="w-full h-48 object-cover">
+                    <img src="./images/pizza.jpg" alt="Gallery" class="w-full h-48 object-cover">
                 </div>
                 <div class="gallery-img" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="https://images.unsplash.com/photo-1625398407796-82650a8c9dd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gallery" class="w-full h-48 object-cover">
+                    <img src="./images/veg.jpg" alt="Gallery" class="w-full h-48 object-cover">
                 </div>
                 <div class="gallery-img" data-aos="zoom-in" data-aos-delay="600">
                     <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gallery" class="w-full h-48 object-cover">
